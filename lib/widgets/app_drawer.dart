@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:kptkfrontendluring/pages/about_screen.dart';
 import 'package:kptkfrontendluring/pages/dashboard_screen.dart';
+import 'package:kptkfrontendluring/pages/kota_screen.dart';
 import 'package:kptkfrontendluring/pages/login_screen.dart';
 import 'package:kptkfrontendluring/pages/siswa.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -127,7 +128,7 @@ class AppDrawer extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
-                //Get.to(Kota(),);
+                Get.to(() => Kota());
               },
               child: const Padding(
                 padding: EdgeInsets.fromLTRB(0, 0, 0, 30),

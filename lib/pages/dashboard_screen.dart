@@ -344,6 +344,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
         elevation: 0,
         centerTitle: false,
         backgroundColor: const Color(0xff3b58ec),
+        iconTheme: IconThemeData(color: Colors.white),
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.zero,
         ),

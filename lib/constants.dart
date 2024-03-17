@@ -16,8 +16,10 @@ class constantsApi{
   static const String siswaEdit = 'siswaapi/apiedit/';
   static const String siswaHapus = 'siswaapi/apidelete/';
   //===kota
-  static const String kotaList = 'kotaapi/apilist';
+  static const String kotaList = 'kotaapi/apilist?search=';
   static const String kotaAdd = 'kotaapi/apiadd';
+  static const String kotaEdit = 'kotaapi/apiedit/';
+  static const String kotaHapus = 'kotaapi/apidelete/';
   //====================
   static const String versiApp = '1';
   static const String versiAppDetil = '1.0.0';
