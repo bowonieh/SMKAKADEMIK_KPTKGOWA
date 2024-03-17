@@ -10,6 +10,14 @@ class constantsApi{
   static const String countSiswaByYear = 'dashboardapi/countsiswabyyear';
   //===account 
   static const String accountInfo = 'account/getaccount';
+  //===Siswa
+  static const String siswaList = 'siswaapi/apilist?search=';
+  static const String siswaAdd = 'siswaapi/apiadd';
+  static const String siswaEdit = 'siswaapi/apiedit/';
+  static const String siswaHapus = 'siswaapi/apidelete/';
+  //===kota
+  static const String kotaList = 'kotaapi/apilist';
+  static const String kotaAdd = 'kotaapi/apiadd';
   //====================
   static const String versiApp = '1';
   static const String versiAppDetil = '1.0.0';

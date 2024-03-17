@@ -1,8 +1,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:kptkfrontendluring/pages/about_screen.dart';
 import 'package:kptkfrontendluring/pages/dashboard_screen.dart';
 import 'package:kptkfrontendluring/pages/login_screen.dart';
+import 'package:kptkfrontendluring/pages/siswa.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 
@@ -91,7 +93,7 @@ class AppDrawer extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
-                //Get.to(Siswa());
+                Get.to(Siswa());
               },
               child: const Padding(
                 padding: EdgeInsets.fromLTRB(0, 0, 0, 30),
@@ -159,7 +161,7 @@ class AppDrawer extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
-                //Get.to(const AppTentang());
+                Get.to(() => AboutApp());
               },
               child: const Padding(
                 padding: EdgeInsets.fromLTRB(0, 0, 0, 30),

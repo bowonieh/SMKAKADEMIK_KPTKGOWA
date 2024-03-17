@@ -343,7 +343,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
       appBar: AppBar(
         elevation: 0,
         centerTitle: false,
-        backgroundColor: const Color(0xff3b59eb),
+        backgroundColor: const Color(0xff3b58ec),
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.zero,
         ),
