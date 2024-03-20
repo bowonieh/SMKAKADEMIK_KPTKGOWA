@@ -264,6 +264,7 @@ Future<List<TahunData>> fetchTahunKel() async {
 class _DashboardScreenState extends State<DashboardScreen> {
   String namaUser = 'Loading....';
   String emailUser = 'Loading....';
+   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   late TooltipBehavior _tooltipBehaviorJenkel;
   late TooltipBehavior _tooltipBehaviorKota;
   late TooltipBehavior _tooltipBehaviorTahun;
@@ -340,11 +341,39 @@ class _DashboardScreenState extends State<DashboardScreen> {
 
     return Scaffold(
       backgroundColor: const Color(0xffffffff),
+      key: _scaffoldKey,
       appBar: AppBar(
         elevation: 0,
         centerTitle: false,
         backgroundColor: const Color(0xff3b58ec),
         iconTheme: IconThemeData(color: Colors.white),
+        actions: [
+          IconButton(onPressed: (){
+            _scaffoldKey.currentState?.openDrawer();
+          }, icon: Icon(Icons.menu))
+        ],
+        leading: Padding(
+            padding: const EdgeInsets.only(
+              right: 20,
+              left: 20
+            ),
+            child: GestureDetector(
+              onTap: () {
+                openDialogProfile();
+              },
+              child: const CircleAvatar(
+                backgroundImage: AssetImage('assets/images/user.png'),
+                radius: 20,
+              ),
+            ),
+          ),
+        /*
+        leading: IconButton(
+          icon: const Icon(Icons.verified_user),
+          onPressed: (){
+            _scaffoldKey.currentState?.openDrawer();
+          },
+        ),*/
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.zero,
         ),
@@ -357,6 +386,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
             color: Color(0xffffffff),
           ),
         ),
+        /*
         actions: [
           Padding(
             padding: const EdgeInsets.only(
@@ -372,7 +402,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
               ),
             ),
           )
-        ],
+        ],*/
       ),
       drawer: const Drawer(
         width: 278,
